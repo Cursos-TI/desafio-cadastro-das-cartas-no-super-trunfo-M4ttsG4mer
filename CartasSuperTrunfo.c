@@ -12,6 +12,7 @@ int main() {
     int numdepontos1, numdepontos2;
     float densidade1, densidade2;
     float pibpercapida1, pibpercapita2;
+    float superpoder1, superpoder2;
 
     printf("|Cadastro das Cartas SuperTrunfo - Países| \n");
     printf("Cadastre a Primeira Carta \n");
@@ -67,6 +68,14 @@ int main() {
 //carta2  
     densidade2 = (float) populacao2 / area2;
     pibpercapita2 = (float) pib2 / populacao2;  
+//superpoder
+    superpoder1 = (float) populacao1 + area1;
+    superpoder1 = (float) pib1 + numdepontos1;
+    superpoder1 = (float) densidade1 + pib1; 
+    
+    superpoder2 = (float) populacao2 + area2;
+    superpoder2 = (float) pib2 + numdepontos2;
+    superpoder2 = (float) densidade2 + pib2; 
 
 //exibindo as cartas
     printf("Primeira Carta | Segunda Carta\n");
@@ -79,6 +88,40 @@ int main() {
     printf("Número de Pontos Turísticos: %d |Número de Pontos Turísticos: %d\n", numdepontos1, numdepontos2);
     printf("Densidade Populacional: %f |Densidade Populacional: %f\n", densidade1, densidade2);
     printf("PIB per capita: %f |PIB per Capita: %f\n", pibpercapida1, pibpercapita2);
+    printf("SuperPoder = %.2f |SuperPoder = %.2f\n", superpoder1, superpoder2);
 
+//comparação das cartas
+    printf("| Comparação das Cartas |\n");
 
+    if (populacao1 > populacao2) {
+        printf("População: Primeira Carta Venceu!\n");}
+    else {
+        printf("População: Segunda Carta Venceu!\n");}
+
+    if (area1 > area1) {
+        printf("Área: Primeira Carta Venceu!\n");}
+    else {
+        printf("Área: Segunda Carta Venceu!\n");}
+
+    if (pib1 > pib2) {
+        printf("PIB: Primeira Carta Venceu!\n");}
+    else {
+        printf("PIB: Segunda Carta Venceu!\n");}
+
+    if (numdepontos1 > numdepontos2) {
+        printf("Pontos Turísticos: Primeira Carta Venceu!\n");}
+    else {
+        printf("Pontos Turísticos: Segunda Carta Venceu!\n");}
+
+    if (densidade1 < densidade2) {
+        printf("Densidade Populacional: Primeira Carta Venceu!\n");}
+    else {
+        printf("Densidade Populacional: Segunda Carta Venceu!\n");}
+
+    if (pibpercapida1 > pibpercapita2) {
+        printf("PIB per capita: Primeira Carta Venceu!\n");}
+    else {
+        printf("PIB per Capita: Segunda Carta Venceu!\n");}
+
+return 0;
 }   
